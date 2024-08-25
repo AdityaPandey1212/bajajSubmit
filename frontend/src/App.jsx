@@ -16,7 +16,7 @@ const App = () => {
         throw new Error('Invalid data format. Expected an array.');
       }
 
-      const result = await axios.post('http://localhost:3000/bfhl', { data: parsedData.data });
+      const result = await axios.post('https://bajaj-submit-server.vercel.app//bfhl', { data: parsedData.data });
       console.log('API response:', result.data);
       setResponse(result.data);
       setError('');
